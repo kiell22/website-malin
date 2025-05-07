@@ -1,0 +1,241 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff8f0;
+    color: #1a1a1a;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #8b0000; /* dark red */
+    padding: 1rem 2rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-list li a {
+    color: #f5deb3; /* wheat */
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover,
+.nav-list li a.active {
+    color: #ffd700; /* gold */
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #8b0000cc, #000000cc);
+    color: #ffd700;
+    position: relative;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border: 8px solid #ffd700;
+    border-radius: 12px;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    background-color: #8b0000;
+    color: #ffd700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    box-shadow: 0 0 8px #ffd700aa;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ffd700;
+    color: #8b0000;
+    box-shadow: 0 0 12px #8b0000aa;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #f5deb3;
+    text-align: center;
+    padding: 1rem 1rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.social-media a {
+    color: #f5deb3;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: 600;
+}
+
+.social-media a:hover {
+    color: #ffd700;
+}
+
+/* Batik/Minangkabau motif border */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url('../assets/images/batik-motif.png');
+    background-repeat: repeat;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+/* Story page styles */
+.cerita-main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.bab {
+    margin-bottom: 2.5rem;
+}
+
+.bab h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+    color: #8b0000;
+}
+
+.illustration {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(139, 0, 0, 0.3);
+}
+
+.pesan-moral {
+    background-color: #fff3cd;
+    border-left: 6px solid #ffdd57;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.highlight-box p {
+    font-style: italic;
+    font-weight: 600;
+    color: #856404;
+}
+
+/* Quiz styles */
+.quiz-section {
+    background-color: #f9f7f1;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.15);
+    margin-bottom: 3rem;
+}
+
+.quiz-section h3 {
+    font-family: 'Playfair Display', serif;
+    color: #8b0000;
+    margin-bottom: 1rem;
+}
+
+.quiz-section label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.quiz-section input[type="text"] {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.25rem;
+    border: 2px solid #8b0000;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.quiz-section input[type="text"]:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 5px #ffd700aa;
+}
+
+.quiz-section .btn {
+    margin-top: 1.5rem;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+/* Quiz result */
+.quiz-result {
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #8b0000;
+}

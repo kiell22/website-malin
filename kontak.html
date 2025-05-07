@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Halaman kontak untuk website cerita Malin Kundang." />
+    <meta name="keywords" content="kontak, cerita Malin Kundang, website edukasi" />
+    <title>Kontak - Cerita Rakyat Indonesia</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cerita.html">Baca Cerita</a></li>
+                <li><a href="karakter.html">Karakter</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="kontak.html" class="active" aria-current="page">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="kontak-main" style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
+        <h1>Kontak Kami</h1>
+        <p>Jika Anda memiliki pertanyaan atau ingin memberikan masukan tentang website ini, silakan hubungi kami melalui:</p>
+        <ul>
+            <li>Email: cerita@malinkundang.id</li>
+            <li>Telepon: +62 812 3456 7890</li>
+            <li>Alamat: Jl. Cerita Rakyat No. 123, Sumatra Barat, Indonesia</li>
+        </ul>
+        <form class="contact-form" action="#" method="post">
+            <label for="name">Nama:</label><br />
+            <input type="text" id="name" name="name" required /><br />
+
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required /><br />
+
+            <label for="message">Pesan:</label><br />
+            <textarea id="message" name="message" rows="5" required></textarea><br />
+
+            <button type="submit" class="btn">Kirim</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Cerita Rakyat Indonesia - Malin Kundang</p>
+            <p>Website edukasi cerita rakyat. Semua hak cipta dilindungi.</p>
+            <div class="social-media">
+                <a href="#" aria-label="Facebook">Facebook</a> |
+                <a href="#" aria-label="Instagram">Instagram</a> |
+                <a href="#" aria-label="Twitter">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
